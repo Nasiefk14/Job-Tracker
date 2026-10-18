@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.use("/api", healthRouter)
 
-app.use((res: Response) => {
+app.use((req: Request, res: Response) => {
     res.status(404).send({ error: "Not Found" });
 });
 
